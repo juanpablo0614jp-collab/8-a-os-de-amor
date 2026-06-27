@@ -1,7 +1,8 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 import { estaDesbloqueado } from "@/lib/auth";
 import Lock from "@/components/Lock";
+import Carrusel from "@/components/Carrusel";
 import { getMomento, momentos, ordinal } from "@/lib/momentos";
 
 export const dynamic = "force-dynamic";
@@ -49,16 +50,8 @@ export default async function MomentoPage({
       </div>
 
       {m.fotos.length > 0 && (
-        <div className="rise-2 mt-12 space-y-5">
-          {m.fotos.map((src, i) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={i}
-              src={src}
-              alt=""
-              className="develop w-full rounded-sm border border-line"
-            />
-          ))}
+        <div className="rise-2 mt-12">
+          <Carrusel fotos={m.fotos} />
         </div>
       )}
 

@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { useAnimate } from "motion/react";
 import { portada } from "@/lib/momentos";
 
 export default function Lock() {
@@ -9,6 +10,7 @@ export default function Lock() {
   const [error, setError] = useState(false);
   const [cargando, setCargando] = useState(false);
   const router = useRouter();
+  const [scope, animate] = useAnimate();
 
   async function abrir(e: FormEvent) {
     e.preventDefault();
@@ -22,19 +24,26 @@ export default function Lock() {
         body: JSON.stringify({ palabra }),
       });
       if (r.ok) {
+        if (scope.current) {
+          await animate(
+            scope.current,
+            { opacity: 0, y: 24, scale: 0.97 },
+            { duration: 0.5, ease: [0.4, 0, 0.2, 1] }
+          );
+        }
         router.refresh();
         return;
       }
       setError(true);
+      setCargando(false);
     } catch {
       setError(true);
-    } finally {
       setCargando(false);
     }
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-6">
+    <main ref={scope} className="flex min-h-screen items-center justify-center px-6">
       <div className="w-full max-w-sm text-center">
         <div className="thread thread--draw mx-auto h-16 w-px" />
         <span className="knot mx-auto my-4 block" />

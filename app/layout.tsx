@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Newsreader } from "next/font/google";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -29,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${fraunces.variable} ${newsreader.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ViewTransitions>{children}</ViewTransitions>
+      </body>
     </html>
   );
 }
