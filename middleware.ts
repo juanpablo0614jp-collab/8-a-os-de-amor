@@ -27,7 +27,7 @@ export async function middleware(request: NextRequest) {
     const match = pathname.match(/^\/(\d+)$/);
     if (!match) return NextResponse.next();
     pageIndex = parseInt(match[1], 10);
-    if (pageIndex < 1 || pageIndex > 8) return NextResponse.next();
+    if (pageIndex < 1 || pageIndex > 9) return NextResponse.next();
   }
 
   // Validar token.
