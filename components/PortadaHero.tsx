@@ -9,12 +9,16 @@ export default function PortadaHero({
   fotos,
   saludo,
   titulo,
+  fecha,
+  lema,
   subtitulo,
   mensaje,
 }: {
   fotos: string[];
   saludo: string;
   titulo: string;
+  fecha?: string;
+  lema?: string;
   subtitulo: string;
   mensaje?: string;
 }) {
@@ -32,8 +36,8 @@ export default function PortadaHero({
 
   return (
     <main className="relative flex min-h-[100dvh] flex-col bg-paper">
-      {/* Zona de la foto: ocupa todo el espacio disponible sobre el texto */}
-      <div className="relative min-h-[60vh] flex-1 overflow-hidden">
+      {/* Foto de fondo con ciclo automático */}
+      <div className="relative min-h-[55vh] flex-1 overflow-hidden">
         <AnimatePresence mode="sync">
           {fotos.length > 0 && (
             <motion.img
@@ -53,12 +57,12 @@ export default function PortadaHero({
           )}
         </AnimatePresence>
 
-        {/* Gradiente que funde la foto con el papel hacia abajo */}
+        {/* Gradiente que funde la foto hacia abajo */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-paper to-transparent" />
 
-        {/* Indicador de foto activa */}
+        {/* Indicadores de foto */}
         {fotos.length > 1 && (
-          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-1.5">
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-1.5">
             {fotos.map((_, i) => (
               <span
                 key={i}
@@ -72,20 +76,35 @@ export default function PortadaHero({
         )}
       </div>
 
-      {/* Texto: sube 5rem para quedar dentro del gradiente */}
-      <div className="relative z-10 -mt-20 px-8 pb-16 text-center">
-        <div className="thread thread--draw mx-auto h-10 w-px" />
-        <span className="knot mx-auto my-3 block" />
-        <p className="rise font-body italic text-ink-soft">{saludo}</p>
-        <h1 className="rise-2 mt-2 font-display text-5xl text-ink sm:text-6xl">
+      {/* Bloque de texto — reducido en mobile para que todo quepa */}
+      <div className="relative z-10 -mt-16 px-6 pb-10 text-center sm:-mt-20 sm:pb-16 sm:px-8">
+        <div className="thread thread--draw mx-auto h-8 w-px sm:h-10" />
+        <span className="knot mx-auto my-2 block sm:my-3" />
+
+        <p className="rise font-body text-xs italic text-ink-soft sm:text-sm">
+          {saludo}
+        </p>
+        <h1 className="rise-2 mt-1 font-display text-4xl text-ink sm:mt-2 sm:text-5xl">
           {titulo}
         </h1>
-        <p className="rise-3 mt-3 font-body text-sm leading-relaxed text-ink-soft">
+
+        {fecha && (
+          <p className="rise-3 mt-2 font-body text-[10px] tracking-[0.3em] text-gold uppercase sm:text-xs">
+            {fecha}
+          </p>
+        )}
+        {lema && (
+          <p className="rise-3 mt-1 font-body text-xs italic text-ink-soft sm:text-sm">
+            {lema}
+          </p>
+        )}
+
+        <p className="rise-3 mt-2 font-body text-[10px] leading-relaxed text-ink-soft/60 sm:mt-3 sm:text-xs">
           {subtitulo}
         </p>
 
         {mensaje && (
-          <p className="rise-3 mx-auto mt-8 max-w-xs font-body text-base italic leading-[1.85] text-ink/80 sm:max-w-sm">
+          <p className="rise-3 mx-auto mt-5 max-w-[280px] font-body text-xs italic leading-[1.85] text-ink/75 sm:mt-8 sm:max-w-sm sm:text-sm">
             {mensaje}
           </p>
         )}

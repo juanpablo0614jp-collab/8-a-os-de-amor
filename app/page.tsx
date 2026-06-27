@@ -15,6 +15,8 @@ export default async function Home() {
       fotos={portada.fotos}
       saludo={portada.saludo}
       titulo={portada.titulo}
+      fecha={portada.fecha}
+      lema={portada.lema}
       subtitulo={portada.subtitulo}
       mensaje={portada.mensaje}
     />

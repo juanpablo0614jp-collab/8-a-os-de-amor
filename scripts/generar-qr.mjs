@@ -46,10 +46,10 @@ function tokenForPage(page) {
 const baseLimpia = base.replace(/\/+$/, "");
 const salida = "qr-salida";
 
-// Página 0 = portada (/)  ·  páginas 1-8 = cada año.
+// Página 0 = portada (/)  ·  páginas 1-9 = cada año.
 const PAGINAS = [
   { n: 0, ruta: "/", label: "portada" },
-  ...Array.from({ length: 8 }, (_, i) => ({
+  ...Array.from({ length: 9 }, (_, i) => ({
     n: i + 1,
     ruta: `/${i + 1}`,
     label: `ano-${i + 1}`,
@@ -74,5 +74,5 @@ for (const { n, ruta, label } of PAGINAS) {
 console.log(
   `\nListo. Tienes ${PAGINAS.length} códigos en la carpeta "${salida}/".\n` +
     "• qr-portada.png  → tapa del álbum\n" +
-    "• qr-ano-1.png … qr-ano-8.png  → una por hoja\n"
+    "• qr-ano-1.png … qr-ano-9.png  → una por hoja\n"
 );
