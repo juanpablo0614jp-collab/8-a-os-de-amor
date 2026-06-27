@@ -191,6 +191,15 @@ export const momentos: Momento[] = [
       "/fotos/ano-8/2025-5.jpg",
       "/fotos/ano-8/2025-6.jpg",
       "/fotos/ano-8/2025-7.jpg",
+      "/fotos/ano-8/2025-8.jpeg",
+      "/fotos/ano-8/2025-9.jpeg",
+      "/fotos/ano-8/2025-10.jpeg",
+      "/fotos/ano-8/2025-11.jpeg",
+      "/fotos/ano-8/2025-12.jpeg",
+      "/fotos/ano-8/2025-13.jpeg",
+      "/fotos/ano-8/2025-14.jpeg",
+      "/fotos/ano-8/2025-15.jpeg",
+      "/fotos/ano-8/2025-16.jpeg",
     ],
   },
   {
@@ -200,7 +209,11 @@ export const momentos: Momento[] = [
     texto: "",
     textoIzq:
       "Elegimos el lugar para nuestra boda, con bastantes tropiezos esta primera mitad pero con el amor más encendido que nunca. Ansioso de que todo salga como lo planeamos. Fue un detallito con muchísimo amor mi vida, lo siento por no hacerte algo más wow.",
-    fotos: [] as string[],
+    fotos: [
+      "/fotos/ano-9/2026-1.jpeg",
+      "/fotos/ano-9/2026-2.jpeg",
+      "/fotos/ano-9/2026-3.jpeg",
+    ],
   },
 ];
 
