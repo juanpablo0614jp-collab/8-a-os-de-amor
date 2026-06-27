@@ -1,5 +1,6 @@
 import { estaDesbloqueadaPagina } from "@/lib/auth";
 import AccesoDenegado from "@/components/AccesoDenegado";
+import Carrusel from "@/components/Carrusel";
 import { portada } from "@/lib/momentos";
 
 export const dynamic = "force-dynamic";
@@ -22,6 +23,12 @@ export default async function Home() {
       <p className="rise-3 mt-4 font-body leading-relaxed text-ink-soft">
         {portada.subtitulo}
       </p>
+
+      {portada.fotos.length > 0 && (
+        <div className="rise-3 mt-12 w-full max-w-sm">
+          <Carrusel fotos={portada.fotos} />
+        </div>
+      )}
     </main>
   );
 }

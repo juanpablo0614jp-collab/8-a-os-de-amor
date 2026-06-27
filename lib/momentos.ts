@@ -14,11 +14,13 @@ export type Momento = {
   fotos: string[];
 };
 
-// Portada (la página principal y el candado).
+// Portada (la página de bienvenida).
+// Pon tus fotos en public/fotos/portada/ y añade las rutas aquí.
 export const portada = {
   saludo: "Para Hillary",
   titulo: "Ocho años",
   subtitulo: "Un año por hoja. Una palabra para abrir cada uno.",
+  fotos: [] as string[],
 };
 
 export const momentos: Momento[] = [
