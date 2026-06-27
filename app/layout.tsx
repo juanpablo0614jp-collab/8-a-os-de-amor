@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${newsreader.variable}`}>
+    <html lang="es" className={`${fraunces.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <body>
         <ViewTransitions>{children}</ViewTransitions>
       </body>
