@@ -28,7 +28,7 @@ export const momentos: Momento[] = [
     titulo: "Donde empezó todo",
     texto:
       "Aquí va el recuerdo del primer año: cómo nos conocimos, esa primera vez que supe que quería quedarme.\n\nEscríbelo con tus palabras, sin apuro. No tiene que ser perfecto; tiene que ser tuyo.",
-    fotos: ["/fotos/ano-1.jpg"],
+    fotos: ["/fotos/ano-1/ano-1.jpg"],
   },
   {
     numero: 2,
@@ -36,7 +36,7 @@ export const momentos: Momento[] = [
     titulo: "Aprendiendo a ser nosotros",
     texto:
       "El segundo año: las primeras costumbres, los planes pequeños, lo que descubrimos el uno del otro.\n\nReemplaza este texto por ese momento que solo nosotros dos entendemos.",
-    fotos: ["/fotos/ano-2.jpg"],
+    fotos: ["/fotos/ano-2/ano-2.jpg"],
   },
   {
     numero: 3,
@@ -44,7 +44,7 @@ export const momentos: Momento[] = [
     titulo: "El año que nos sostuvimos",
     texto:
       "El tercer año: lo difícil también construye. Aquí cuenta cómo nos cuidamos cuando todo afuera era incierto.\n\nUn recuerdo, una frase, lo que sientas.",
-    fotos: ["/fotos/ano-3.jpg"],
+    fotos: ["/fotos/ano-3/ano-3.jpg"],
   },
   {
     numero: 4,
@@ -52,7 +52,7 @@ export const momentos: Momento[] = [
     titulo: "Más lejos, juntos",
     texto:
       "El cuarto año: un viaje, una decisión grande, un sueño que empezamos a perseguir en serio.\n\nCuéntalo aquí.",
-    fotos: ["/fotos/ano-4.jpg"],
+    fotos: ["/fotos/ano-4/ano-4.jpg"],
   },
   {
     numero: 5,
@@ -60,7 +60,7 @@ export const momentos: Momento[] = [
     titulo: "Lo cotidiano hecho hogar",
     texto:
       "El quinto año: la rutina que se volvió bonita. El café, las risas tontas, la vida normal contigo que no cambiaría por nada.\n\nTu recuerdo va aquí.",
-    fotos: ["/fotos/ano-5.jpg"],
+    fotos: ["/fotos/ano-5/ano-5.jpg"],
   },
   {
     numero: 6,
@@ -68,7 +68,7 @@ export const momentos: Momento[] = [
     titulo: "Creciendo en la misma dirección",
     texto:
       "El sexto año: los proyectos que arrancamos, lo que logramos, cómo cada uno empujó al otro a ser mejor.\n\nEscríbelo a tu manera.",
-    fotos: ["/fotos/ano-6.jpg"],
+    fotos: ["/fotos/ano-6/ano-6.jpg"],
   },
   {
     numero: 7,
@@ -76,7 +76,7 @@ export const momentos: Momento[] = [
     titulo: "Seguros de lo que somos",
     texto:
       "El séptimo año: ya sin dudas. Aquí va ese momento donde supiste, otra vez, que esto es para siempre.\n\nTu turno.",
-    fotos: ["/fotos/ano-7.jpg"],
+    fotos: ["/fotos/ano-7/ano-7.jpg"],
   },
   {
     numero: 8,
@@ -84,7 +84,7 @@ export const momentos: Momento[] = [
     titulo: "Y apenas empezamos",
     texto:
       "El octavo año: hasta hoy. Lo que viene, lo que soñamos, la pregunta que quizá quieras dejar aquí.\n\nCierra con lo que quieras decirle.",
-    fotos: ["/fotos/ano-8.jpg"],
+    fotos: ["/fotos/ano-8/ano-8.jpg"],
   },
 ];
 
