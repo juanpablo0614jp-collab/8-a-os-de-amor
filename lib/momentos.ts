@@ -20,7 +20,17 @@ export const portada = {
   saludo: "Para Hillary",
   titulo: "Ocho años",
   subtitulo: "Un año por hoja. Una palabra para abrir cada uno.",
-  fotos: [] as string[],
+  // Las "principal" van primero — son las que se ven al abrir.
+  fotos: [
+    "/fotos/portada/Portada-principal.jpeg",
+    "/fotos/portada/Portada-principal2.jpeg",
+    "/fotos/portada/Portada-principal3.jpeg",
+    "/fotos/portada/Portada1.jpg",
+    "/fotos/portada/Portada2.jpg",
+    "/fotos/portada/Portada3.jpg",
+    "/fotos/portada/Portada4.jpg",
+    "/fotos/portada/Portada5.jpg",
+  ] as string[],
 };
 
 export const momentos: Momento[] = [
