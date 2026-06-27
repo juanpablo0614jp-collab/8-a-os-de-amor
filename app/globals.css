@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #fbf9f5;
+  --ink: #24232a;
+  --ink-soft: #5a5660;
+  --gold: #a87b4f;
+  --line: #e7e1d6;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-newsreader), Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* El hilo vertical: como el hilo que cose el lomo del álbum. */
+.thread {
+  background: var(--line);
+}
+.thread--draw {
+  transform-origin: top;
+  animation: draw 1.1s ease-out both;
+}
+@keyframes draw {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* El nudo del hilo en cada año. */
+.knot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: var(--paper);
+  border: 1.5px solid var(--gold);
+}
+
+/* Aparición suave del texto. */
+.rise {
+  animation: rise 0.8s ease-out both;
+}
+.rise-2 {
+  animation: rise 0.8s ease-out 0.12s both;
+}
+.rise-3 {
+  animation: rise 0.8s ease-out 0.24s both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* La foto "revela" como un positivo que aparece. */
+.develop {
+  animation: develop 1.4s ease-out both;
+}
+@keyframes develop {
+  from {
+    opacity: 0;
+    filter: blur(12px) saturate(0.6);
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thread--draw,
+  .rise,
+  .rise-2,
+  .rise-3,
+  .develop {
+    animation: none;
+  }
+}
