@@ -10,11 +10,13 @@ export default function PortadaHero({
   saludo,
   titulo,
   subtitulo,
+  mensaje,
 }: {
   fotos: string[];
   saludo: string;
   titulo: string;
   subtitulo: string;
+  mensaje?: string;
 }) {
   const reduce = useReducedMotion();
   const [idx, setIdx] = useState(0);
@@ -81,6 +83,12 @@ export default function PortadaHero({
         <p className="rise-3 mt-3 font-body text-sm leading-relaxed text-ink-soft">
           {subtitulo}
         </p>
+
+        {mensaje && (
+          <p className="rise-3 mx-auto mt-8 max-w-xs font-body text-base italic leading-[1.85] text-ink/80 sm:max-w-sm">
+            {mensaje}
+          </p>
+        )}
       </div>
     </main>
   );

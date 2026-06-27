@@ -20,6 +20,8 @@ export const portada = {
   saludo: "Para Hillary",
   titulo: "Ocho años",
   subtitulo: "Un año por hoja. Una palabra para abrir cada uno.",
+  mensaje:
+    "Hace 8 años inició esto, siempre estuve convencido que sería algo que duraría mucho tiempo, me enamoré perdidamente y día a día se ha ido reafirmando este sentimiento, creo que nunca esperé que alguien llegará a mi vida a enseñarme tanto y mucho menos que sería tan feliz. Te amo como a nadie en el mundo mi vida.",
   // Las "principal" van primero — son las que se ven al abrir.
   fotos: [
     "/fotos/portada/Portada-principal.jpeg",

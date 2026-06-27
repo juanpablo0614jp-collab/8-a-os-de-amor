@@ -16,6 +16,7 @@ export default async function Home() {
       saludo={portada.saludo}
       titulo={portada.titulo}
       subtitulo={portada.subtitulo}
+      mensaje={portada.mensaje}
     />
   );
 }
