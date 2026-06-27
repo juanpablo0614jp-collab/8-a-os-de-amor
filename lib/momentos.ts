@@ -42,7 +42,14 @@ export const momentos: Momento[] = [
     titulo: "Donde empezó todo",
     texto:
       "Aquí va el recuerdo del primer año: cómo nos conocimos, esa primera vez que supe que quería quedarme.\n\nEscríbelo con tus palabras, sin apuro. No tiene que ser perfecto; tiene que ser tuyo.",
-    fotos: ["/fotos/ano-1/ano-1.jpg"],
+    fotos: [
+      "/fotos/ano-1/2018-1.jpg",
+      "/fotos/ano-1/2018-2.jpg",
+      "/fotos/ano-1/2018-3.jpg",
+      "/fotos/ano-1/2018-4.jpeg",
+      "/fotos/ano-1/2018-5.jpeg",
+      "/fotos/ano-1/2018-6.jpg.jpeg",
+    ],
   },
   {
     numero: 2,

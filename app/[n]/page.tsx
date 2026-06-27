@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { estaDesbloqueadaPagina } from "@/lib/auth";
 import AccesoDenegado from "@/components/AccesoDenegado";
-import Carrusel from "@/components/Carrusel";
 import { getMomento, momentos, ordinal } from "@/lib/momentos";
 
 export const dynamic = "force-dynamic";
@@ -39,8 +38,27 @@ export default async function MomentoPage({
       </div>
 
       {m.fotos.length > 0 && (
-        <div className="rise-2 mt-12">
-          <Carrusel fotos={m.fotos} />
+        <div
+          className={[
+            "rise-2 mt-12",
+            m.fotos.length === 1
+              ? ""
+              : "grid grid-cols-2 gap-2",
+          ].join(" ")}
+        >
+          {m.fotos.map((src, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={i}
+              src={src}
+              alt=""
+              className={[
+                "develop w-full rounded-sm border border-line",
+                m.fotos.length > 1 ? "aspect-square object-cover" : "",
+              ].join(" ")}
+              style={{ animationDelay: `${i * 0.18}s` }}
+            />
+          ))}
         </div>
       )}
 
